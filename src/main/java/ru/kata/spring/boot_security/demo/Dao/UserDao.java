@@ -1,10 +1,8 @@
 package ru.kata.spring.boot_security.demo.Dao;
 
-
 import java.util.List;
 import org.springframework.stereotype.Repository;
 import ru.kata.spring.boot_security.demo.model.User;
-
 
 @Repository
 public interface UserDao {

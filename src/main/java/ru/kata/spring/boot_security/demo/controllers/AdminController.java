@@ -48,7 +48,7 @@ public class AdminController {
     @GetMapping("/new")
     public String CreateUserForm(@ModelAttribute("user") @Valid User user, ModelMap model) {
         model.addAttribute("roles", roleService.getRoles());
-        return "userCreate";
+        return "new";
     }
 
     @PostMapping("/")
@@ -58,10 +58,11 @@ public class AdminController {
         userService.addUser(user);
         return "redirect:/admin/";
     }
+
     @GetMapping("/{id}/update")
     public String getEditUserForm(ModelMap model, @PathVariable("id") Long id) {
         model.addAttribute("user", userService.getUser(id));
-        return "userUpdate";
+        return "updateInfo";
     }
 
     @PatchMapping("/{id}")
@@ -75,9 +76,9 @@ public class AdminController {
         return "redirect:/admin/";
     }
 
-        @DeleteMapping("/{id}")
-        public String deleteUser (@PathVariable("id") Long id){
-            userService.removeUser(id);
-            return "redirect:/admin/";
-        }
+    @DeleteMapping("/{id}")
+    public String deleteUser(@PathVariable("id") Long id) {
+        userService.removeUser(id);
+        return "redirect:/admin/";
     }
+}

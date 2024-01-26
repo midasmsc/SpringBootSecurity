@@ -9,12 +9,13 @@
 <body>
 <h1>Full users list</h1>
 
-<table border="1px">
+<table border="2px">
     <tr>
         <th>Name</th>
         <th>LastName</th>
         <th>Email</th>
         <th>Age</th>
+        <th>Role</th>
         <th>Action</th>
     </tr>
     <tr th:each="user : ${listOfUsers}">
@@ -22,6 +23,9 @@
         <td th:text="${user.getLastName()}"></td>
         <td th:text="${user.getEmail()}"></td>
         <td th:text="${user.getAge()}"></td>
+        <td th:text="${user.getRoles()}"></td>
+
+
         <td >
             <form method="GET" th:action="@{/admin/{id}/update(id=${user.getId()})}">
                 <input type="submit" value="Update"/>
@@ -34,8 +38,7 @@
 </table>
 
 <br>
-
-<b><input type="button" value="Add new User"
+<b><input type="button" value="Add User"
        onclick="window.location.href = 'new'"/> <b>
 <br>
     <b><input type="button" value="My Profile"

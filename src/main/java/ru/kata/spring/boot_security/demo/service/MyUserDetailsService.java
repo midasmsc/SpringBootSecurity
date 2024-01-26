@@ -14,7 +14,6 @@ import ru.kata.spring.boot_security.demo.Dao.UserDaoImpl;
 import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 
-
 @Component
 public class MyUserDetailsService implements UserDetailsService {
     private final UserDao userDao;

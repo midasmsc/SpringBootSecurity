@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import ru.kata.spring.boot_security.demo.Dao.RoleDao;
 import ru.kata.spring.boot_security.demo.model.Role;
 
-
 @Service
 public class RoleServiceImpl implements RoleService {
     private final RoleDao roleDao;

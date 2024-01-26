@@ -5,31 +5,34 @@
     <title>About user</title>
 </head>
 <div align="center">
-<body>
-<h1>Account data</h1>
+    <body>
+    <h1>Account data</h1>
 
-<table border="2px" >
-    <thead>
-    <tr>
-        <th scope="col">Name</th>
-        <th scope="col">LastName</th>
-        <th scope="col">Email</th>
-        <th scope="col">Age</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:object="${user}">
-        <td><h1 th:text="${user.getName()} "></h1></td>
-        <td><h1 th:text="${user.getLastName()}"></h1></td>
-        <td><h1 th:text="${user.getEmail()}"></h1></td>
-        <td><h1 th:text="${user.getAge()}"></h1></td>
-    </tr>
-    </tbody>
-</table>
+    <table border="2px">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">LastName</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:object="${user}">
+            <td><h1 th:text="${user.getName()} "></h1></td>
+            <td><h1 th:text="${user.getLastName()}"></h1></td>
+            <td><h1 th:text="${user.getEmail()}"></h1></td>
+            <td><h1 th:text="${user.getAge()}"></h1></td>
+            <td><h1 th:text="${user.getRoles()}"></h1></td>
 
-<input align="right" type = "button" value = "Logout"
-       onclick = "window.location.href = '/logout'"/>
+        </tr>
+        </tbody>
+    </table>
 
-</body>
+    <input align="right" type="button" value="Logout"
+           onclick="window.location.href = '/logout'"/>
+
+    </body>
 </div>
 </html>

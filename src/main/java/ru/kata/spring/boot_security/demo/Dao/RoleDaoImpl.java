@@ -8,7 +8,6 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import ru.kata.spring.boot_security.demo.model.Role;
 
-
 @Repository
 public class RoleDaoImpl implements RoleDao {
     @PersistenceContext
@@ -26,7 +25,7 @@ public class RoleDaoImpl implements RoleDao {
     }
     @Override
     public Role findByName(String name) {
-        Query query = entityManager.createQuery("SELECT r FROM Role r WHERE r.name = :name");
+        Query query = entityManager.createQuery("SELECT role FROM Role role WHERE role.name = :name");
         query.setParameter("name", name);
         return (Role) query.getSingleResult();
     }
