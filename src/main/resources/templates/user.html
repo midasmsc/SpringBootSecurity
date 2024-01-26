@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-    <title>User information</title>
+    <title>About user</title>
 </head>
+<div align="center">
 <body>
+<h1>Account data</h1>
 
-<table border="1px" >
+<table border="2px" >
     <thead>
     <tr>
         <th scope="col">Name</th>
         <th scope="col">LastName</th>
+        <th scope="col">Email</th>
         <th scope="col">Age</th>
     </tr>
     </thead>
@@ -17,6 +21,7 @@
     <tr th:object="${user}">
         <td><h1 th:text="${user.getName()} "></h1></td>
         <td><h1 th:text="${user.getLastName()}"></h1></td>
+        <td><h1 th:text="${user.getEmail()}"></h1></td>
         <td><h1 th:text="${user.getAge()}"></h1></td>
     </tr>
     </tbody>
@@ -26,4 +31,5 @@
        onclick = "window.location.href = '/logout'"/>
 
 </body>
+</div>
 </html>

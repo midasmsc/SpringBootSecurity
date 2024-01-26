@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <title>New User</title>
 </head>
+<div align="center">
 <body>
 
 <br>
 
 <form th:method = "POST" th:action = "@{/admin/}" th:object= "${user}">
-    <label for = "NickName"> Name:</label>
-    <input type = "text" th:field = "*{name}" id = "NickName"/>
+    <label for = "name"> Name:</label>
+    <input type = "text" th:field = "*{name}" id = "name"/>
     <br>
     <br>
     <label for = "lastName"> Lastname:</label>
@@ -20,6 +21,10 @@
     <br>
     <label for = "age"> Age:</label>
     <input type = "text" th:field = "*{age}" id = "age"/>
+    <br>
+    <br>
+    <label for = "email"> Email:</label>
+    <input type = "text" th:field = "*{email}" id = "email"/>
     <br>
     <br>
     <label for = "password"> Password:</label>
@@ -40,4 +45,5 @@
        onclick = "window.location.href = '/logout'"/>
 
 </body>
+</div>
 </html>

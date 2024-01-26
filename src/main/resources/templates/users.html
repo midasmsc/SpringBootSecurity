@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <title></title>
 </head>
+<div align="center">
 <body>
-<h2>Users</h2>
+<h1>Full users list</h1>
+
 <table border="1px">
     <tr>
         <th>Name</th>
         <th>LastName</th>
+        <th>Email</th>
         <th>Age</th>
-        <th>Operations</th>
+        <th>Action</th>
     </tr>
     <tr th:each="user : ${listOfUsers}">
         <td th:text="${user.getName()}"></td>
         <td th:text="${user.getLastName()}"></td>
+        <td th:text="${user.getEmail()}"></td>
         <td th:text="${user.getAge()}"></td>
         <td >
             <form method="GET" th:action="@{/admin/{id}/update(id=${user.getId()})}">
@@ -38,5 +42,7 @@
        onclick="window.location.href = '/user'"/><b>
         <b><input type="button" value="Logout"
        onclick="window.location.href = '/logout'"/><b>
+
 </body>
+</div>
 </html>

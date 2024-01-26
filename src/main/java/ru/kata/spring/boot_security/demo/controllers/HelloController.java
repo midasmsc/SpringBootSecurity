@@ -10,10 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HelloController {
     @GetMapping("/")
     public String sayHello(ModelMap modelMap) {
-        List<String> messages = new ArrayList<>();
-        messages.add("Welcome on my page!");
-        messages.add("Click the button to authenticate and authorize!");
-        modelMap.addAttribute("messages", messages);
+//        List<String> messages = new ArrayList<>();
+//        messages.add("Welcome to the CRUD Spring Boot and Security testing!");
+//        messages.add("I hope it still works...");
+//        messages.add("Click the button to login!");
+//        modelMap.addAttribute("messages", messages);
         return "hello";
     }
 }
