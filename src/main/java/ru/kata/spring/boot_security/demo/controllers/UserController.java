@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import ru.kata.spring.boot_security.demo.Dao.UserDaoImpl;
 import ru.kata.spring.boot_security.demo.model.User;
 
-
 @Controller
 public class UserController {
     private final UserDaoImpl userDaoImpl;

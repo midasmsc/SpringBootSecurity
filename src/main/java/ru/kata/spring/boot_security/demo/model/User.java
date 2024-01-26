@@ -1,6 +1,5 @@
 package ru.kata.spring.boot_security.demo.model;
 
-
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Set;

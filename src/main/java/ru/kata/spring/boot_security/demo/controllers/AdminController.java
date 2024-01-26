@@ -3,7 +3,6 @@ package ru.kata.spring.boot_security.demo.controllers;
 import java.security.Principal;
 import java.util.Collections;
 import java.util.List;
-
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
@@ -22,7 +21,6 @@ import ru.kata.spring.boot_security.demo.model.Role;
 import ru.kata.spring.boot_security.demo.model.User;
 import ru.kata.spring.boot_security.demo.service.RoleService;
 import ru.kata.spring.boot_security.demo.service.UserService;
-
 
 @Controller
 @RequestMapping("/admin")
